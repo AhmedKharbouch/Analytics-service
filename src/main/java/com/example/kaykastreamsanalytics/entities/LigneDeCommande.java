@@ -10,13 +10,20 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Date;
+
 @Entity
-@Data @AllArgsConstructor @NoArgsConstructor @ToString
-public class PageEvent {
-      @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-      Long id;
-      String name_page;
-      String user_name;
-      Date date_event;
-      long duration_event;
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+public class LigneDeCommande {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long id;
+    String Produit;
+    String Client;
+    Date date_commande;
+    long quantite;
+    double prix;
+    long duration;
 }
